@@ -14,7 +14,7 @@
 		E86873851F0A8AEA00CB1676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E86873841F0A8AEA00CB1676 /* Assets.xcassets */; };
 		E86873881F0A8AEA00CB1676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E86873861F0A8AEA00CB1676 /* LaunchScreen.storyboard */; };
 		E86873931F0A8BAE00CB1676 /* UIView+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873921F0A8BAE00CB1676 /* UIView+NightTheme.m */; };
-		E86873961F0A8D6300CB1676 /* SINightThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873951F0A8D6300CB1676 /* SINightThemeManager.m */; };
+		E868739A1F0A9E8400CB1676 /* SINightThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873991F0A9E8400CB1676 /* SINightThemeManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,9 @@
 		E86873891F0A8AEA00CB1676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E86873911F0A8BAE00CB1676 /* UIView+NightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NightTheme.h"; sourceTree = "<group>"; };
 		E86873921F0A8BAE00CB1676 /* UIView+NightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NightTheme.m"; sourceTree = "<group>"; };
-		E86873941F0A8D6300CB1676 /* SINightThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SINightThemeManager.h; sourceTree = "<group>"; };
-		E86873951F0A8D6300CB1676 /* SINightThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SINightThemeManager.m; sourceTree = "<group>"; };
+		E86873981F0A9E8400CB1676 /* SINightThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SINightThemeManager.h; sourceTree = "<group>"; };
+		E86873991F0A9E8400CB1676 /* SINightThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SINightThemeManager.m; sourceTree = "<group>"; };
+		E868739B1F0A9E9D00CB1676 /* NightTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NightTheme.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +90,9 @@
 		E868738F1F0A8B1D00CB1676 /* NightThemeManager */ = {
 			isa = PBXGroup;
 			children = (
+				E868739B1F0A9E9D00CB1676 /* NightTheme.h */,
+				E86873971F0A9E8400CB1676 /* Manager */,
 				E86873901F0A8B8200CB1676 /* UIView */,
-				E86873941F0A8D6300CB1676 /* SINightThemeManager.h */,
-				E86873951F0A8D6300CB1676 /* SINightThemeManager.m */,
 			);
 			name = NightThemeManager;
 			path = ../../NightThemeManager;
@@ -104,6 +105,15 @@
 				E86873921F0A8BAE00CB1676 /* UIView+NightTheme.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		E86873971F0A9E8400CB1676 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E86873981F0A9E8400CB1676 /* SINightThemeManager.h */,
+				E86873991F0A9E8400CB1676 /* SINightThemeManager.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E86873801F0A8AEA00CB1676 /* ViewController.m in Sources */,
-				E86873961F0A8D6300CB1676 /* SINightThemeManager.m in Sources */,
+				E868739A1F0A9E8400CB1676 /* SINightThemeManager.m in Sources */,
 				E868737D1F0A8AEA00CB1676 /* AppDelegate.m in Sources */,
 				E868737A1F0A8AEA00CB1676 /* main.m in Sources */,
 				E86873931F0A8BAE00CB1676 /* UIView+NightTheme.m in Sources */,
