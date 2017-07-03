@@ -15,7 +15,7 @@ FOUNDATION_EXTERN NSString *const SIDawnComingNotification ;
 FOUNDATION_EXTERN NSString *const SINightThemeOldThemeKey ;
 FOUNDATION_EXTERN NSString *const SINightThemeNewThemeKey ;
 
-typedef enum : NSUInteger {
+typedef enum : NSInteger {
     SINightThemeNormal,
     SINightThemeNight,
 } SINightTheme;
