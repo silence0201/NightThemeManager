@@ -48,7 +48,7 @@
     if (nightTextColorHighlighted) {
         return nightTextColorHighlighted ;
     }
-    return [self titleColorForState:UIControlStateNormal] ;
+    return [self titleColorForState:UIControlStateHighlighted] ;
 }
 
 - (void)setNightTextColorHighlighted:(UIColor *)nightTextColorHighlighted {
@@ -100,6 +100,7 @@
     if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
         [self setTitleColor:normalTextColorSelected forState:UIControlStateSelected];
     }
+    objc_setAssociatedObject(self, @selector(normalTextColorSelected), normalTextColorSelected, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)nightTextColorDisabled {
@@ -372,4 +373,83 @@
     objc_setAssociatedObject(self, @selector(normalBackgroundImageDisabled), normalBackgroundImageDisabled, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+- (void)themeChange {
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setBackgroundColor:self.nightBackgroundColor];
+        
+        [self setTitleColor:self.nightTextColorNormal forState:UIControlStateNormal];
+        [self setTitleColor:self.nightTextColorSelected forState:UIControlStateSelected];
+        [self setTitleColor:self.nightTextColorHighlighted forState:UIControlStateHighlighted];
+        [self setTitleColor:self.nightTextColorDisabled forState:UIControlStateDisabled];
+        
+        [self setImage:self.nightImageNormal forState:UIControlStateNormal];
+        [self setImage:self.nightImageHighlighted forState:UIControlStateHighlighted];
+        [self setImage:self.nightImageSelected forState:UIControlStateSelected];
+        [self setImage:self.nightImageDisabled forState:UIControlStateDisabled];
+        
+        [self setBackgroundImage:self.nightBackgroundImageNormal forState:UIControlStateNormal];
+        [self setBackgroundImage:self.nightBackgroundImageHighlighted forState:UIControlStateHighlighted];
+        [self setBackgroundImage:self.nightBackgroundImageSelected forState:UIControlStateSelected];
+        [self setBackgroundImage:self.nightBackgroundImageDisabled forState:UIControlStateDisabled];
+    } else {
+        [self setBackgroundColor:self.normalBackgroundColor];
+        
+        [self setTitleColor:self.nightTextColorNormal forState:UIControlStateNormal];
+        [self setTitleColor:self.normalTextColorSelected forState:UIControlStateSelected];
+        [self setTitleColor:self.normalTextColorHighlighted forState:UIControlStateHighlighted];
+        [self setTitleColor:self.normalTextColorDisabled forState:UIControlStateDisabled];
+        
+        [self setImage:self.normalImageNormal forState:UIControlStateNormal];
+        [self setImage:self.normalImageHighlighted forState:UIControlStateHighlighted];
+        [self setImage:self.normalImageSelected forState:UIControlStateSelected];
+        [self setImage:self.normalImageDisabled forState:UIControlStateDisabled];
+        
+        [self setBackgroundImage:self.normalBackgroundImageNormal forState:UIControlStateNormal];
+        [self setBackgroundImage:self.normalBackgroundImageHighlighted forState:UIControlStateHighlighted];
+        [self setBackgroundImage:self.normalBackgroundImageSelected forState:UIControlStateSelected];
+        [self setBackgroundImage:self.normalBackgroundImageDisabled forState:UIControlStateDisabled];
+    }
+}
+
+- (void)themeChangeWithDuration:(NSTimeInterval)duration {
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [UIView animateWithDuration:duration animations:^{
+            [self setBackgroundColor:self.nightBackgroundColor];
+            
+            [self setTitleColor:self.nightTextColorNormal forState:UIControlStateNormal];
+            [self setTitleColor:self.nightTextColorSelected forState:UIControlStateSelected];
+            [self setTitleColor:self.nightTextColorHighlighted forState:UIControlStateHighlighted];
+            [self setTitleColor:self.nightTextColorDisabled forState:UIControlStateDisabled];
+        }];
+        
+        [self setImage:self.nightImageNormal forState:UIControlStateNormal];
+        [self setImage:self.nightImageHighlighted forState:UIControlStateHighlighted];
+        [self setImage:self.nightImageSelected forState:UIControlStateSelected];
+        [self setImage:self.nightImageDisabled forState:UIControlStateDisabled];
+        
+        [self setBackgroundImage:self.nightBackgroundImageNormal forState:UIControlStateNormal];
+        [self setBackgroundImage:self.nightBackgroundImageHighlighted forState:UIControlStateHighlighted];
+        [self setBackgroundImage:self.nightBackgroundImageSelected forState:UIControlStateSelected];
+        [self setBackgroundImage:self.nightBackgroundImageDisabled forState:UIControlStateDisabled];
+    } else {
+        [UIView animateWithDuration:duration animations:^{
+            [self setBackgroundColor:self.normalBackgroundColor];
+            
+            [self setTitleColor:self.normalTextColorNormal forState:UIControlStateNormal];
+            [self setTitleColor:self.normalTextColorSelected forState:UIControlStateSelected];
+            [self setTitleColor:self.normalTextColorHighlighted forState:UIControlStateHighlighted];
+            [self setTitleColor:self.normalTextColorDisabled forState:UIControlStateDisabled];
+        }];
+        
+        [self setImage:self.normalImageNormal forState:UIControlStateNormal];
+        [self setImage:self.normalImageHighlighted forState:UIControlStateHighlighted];
+        [self setImage:self.normalImageSelected forState:UIControlStateSelected];
+        [self setImage:self.normalImageDisabled forState:UIControlStateDisabled];
+        
+        [self setBackgroundImage:self.normalBackgroundImageNormal forState:UIControlStateNormal];
+        [self setBackgroundImage:self.normalBackgroundImageHighlighted forState:UIControlStateHighlighted];
+        [self setBackgroundImage:self.normalBackgroundImageSelected forState:UIControlStateSelected];
+        [self setBackgroundImage:self.normalBackgroundImageDisabled forState:UIControlStateDisabled];
+    }
+}
 @end
