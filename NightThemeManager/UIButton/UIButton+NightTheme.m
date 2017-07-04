@@ -82,7 +82,10 @@
 }
 
 - (void)setNightTextColorSelected:(UIColor *)nightTextColorSelected {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setTitleColor:nightTextColorSelected forState:UIControlStateSelected] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightTextColorSelected), nightTextColorSelected, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)normalTextColorSelected {
@@ -94,7 +97,9 @@
 }
 
 - (void)setNormalTextColorSelected:(UIColor *)normalTextColorSelected {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
+        [self setTitleColor:normalTextColorSelected forState:UIControlStateSelected];
+    }
 }
 
 - (UIColor *)nightTextColorDisabled {
@@ -106,7 +111,10 @@
 }
 
 - (void)setNightTextColorDisabled:(UIColor *)nightTextColorDisabled {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setTitleColor:nightTextColorDisabled forState:UIControlStateDisabled] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightTextColorDisabled), nightTextColorDisabled, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)normalTextColorDisabled {
@@ -118,7 +126,10 @@
 }
 
 - (void)setNormalTextColorDisabled:(UIColor *)normalTextColorDisabled {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
+        [self setTitleColor:normalTextColorDisabled forState:UIControlStateDisabled] ;
+    }
+    objc_setAssociatedObject(self, @selector(normalTextColorDisabled), normalTextColorDisabled, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)nightImageNormal {
@@ -130,7 +141,10 @@
 }
 
 - (void)setNightImageNormal:(UIImage *)nightImageNormal {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setImage:nightImageNormal forState:UIControlStateNormal] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightImageNormal), nightImageNormal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)normalImageNormal {
@@ -142,19 +156,25 @@
 }
 
 - (void)setNormalImageNormal:(UIImage *)normalImageNormal {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
+        [self setImage:normalImageNormal forState:UIControlStateNormal] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightImageNormal), normalImageNormal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (UIImage *)nightImageHihlighted {
-    UIImage *nightImageHihlighted = objc_getAssociatedObject(self, _cmd);
-    if (nightImageHihlighted) {
-        return nightImageHihlighted;
+- (UIImage *)nightImageHighlighted {
+    UIImage *nightImageHighlighted = objc_getAssociatedObject(self, _cmd);
+    if (nightImageHighlighted) {
+        return nightImageHighlighted;
     }
     return [self imageForState:UIControlStateHighlighted];
 }
 
 - (void)setNightImageHighlighted:(UIImage *)nightImageHighlighted {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setImage:nightImageHighlighted forState:UIControlStateHighlighted] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightImageHighlighted), nightImageHighlighted, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)normalImageHighlighted {
@@ -166,7 +186,10 @@
 }
 
 - (void)setNormalImageHighlighted:(UIImage *)normalImageHighlighted {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
+        [self setImage:normalImageHighlighted forState:UIControlStateHighlighted] ;
+    }
+    objc_setAssociatedObject(self, @selector(normalImageHighlighted), normalImageHighlighted, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)nightImageSelected {
@@ -178,7 +201,10 @@
 }
 
 - (void)setNightImageSelected:(UIImage *)nightImageSelected {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setImage:nightImageSelected forState:UIControlStateSelected] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightImageSelected), nightImageSelected, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)normalImageSelected {
@@ -190,7 +216,10 @@
 }
 
 - (void)setNormalImageSelected:(UIImage *)normalImageSelected {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
+        [self setImage:normalImageSelected forState:UIControlStateSelected] ;
+    }
+    objc_setAssociatedObject(self, @selector(normalImageSelected), normalImageSelected, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)nightImageDisabled {
@@ -202,7 +231,10 @@
 }
 
 - (void)setNightImageDisabled:(UIImage *)nightImageDisabled {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setImage:nightImageDisabled forState:UIControlStateDisabled] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightImageDisabled), nightImageDisabled, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)normalImageDisabled {
@@ -214,7 +246,10 @@
 }
 
 - (void)setNormalImageDisabled:(UIImage *)normalImageDisabled {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
+        [self setImage:normalImageDisabled forState:UIControlStateDisabled] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightImageDisabled), normalImageDisabled, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)nightBackgroundImageNormal {
@@ -226,7 +261,10 @@
 }
 
 - (void)setNightBackgroundImageNormal:(UIImage *)nightBackgroundImageNormal {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setBackgroundImage:nightBackgroundImageNormal forState:UIControlStateNormal] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightBackgroundImageNormal), nightBackgroundImageNormal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)normalBackgroundImageNormal {
@@ -238,7 +276,10 @@
 }
 
 - (void)setNormalBackgroundImageNormal:(UIImage *)normalBackgroundImageNormal {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
+        [self setBackgroundImage:normalBackgroundImageNormal forState:UIControlStateNormal] ;
+    }
+    objc_setAssociatedObject(self, @selector(normalBackgroundImageNormal), normalBackgroundImageNormal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)nightBackgroundImageHighlighted {
@@ -250,7 +291,10 @@
 }
 
 - (void)setNightBackgroundImageHighlighted:(UIImage *)nightBackgroundImageHighlighted {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setBackgroundImage:nightBackgroundImageHighlighted forState:UIControlStateHighlighted] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightBackgroundImageHighlighted), nightBackgroundImageHighlighted, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)normalBackgroundImageHighlighted {
@@ -262,7 +306,10 @@
 }
 
 - (void)setNormalBackgroundImageHighlighted:(UIImage *)normalBackgroundImageHighlighted {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
+        [self setBackgroundImage:normalBackgroundImageHighlighted forState:UIControlStateHighlighted] ;
+    }
+    objc_setAssociatedObject(self, @selector(normalBackgroundImageHighlighted), normalBackgroundImageHighlighted, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)nightBackgroundImageSelected {
@@ -274,7 +321,10 @@
 }
 
 - (void)setNightBackgroundImageSelected:(UIImage *)nightBackgroundImageSelected {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setBackgroundImage:nightBackgroundImageSelected forState:UIControlStateSelected] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightBackgroundImageSelected), nightBackgroundImageSelected, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)normalBackgroundImageSelected {
@@ -286,7 +336,10 @@
 }
 
 - (void)setNormalBackgroundImageSelected:(UIImage *)normalBackgroundImageSelected {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
+        [self setBackgroundImage:normalBackgroundImageSelected forState:UIControlStateSelected] ;
+    }
+    objc_setAssociatedObject(self, @selector(normalBackgroundImageSelected), normalBackgroundImageSelected, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)nightBackgroundImageDisabled {
@@ -297,8 +350,11 @@
     return [self backgroundImageForState:UIControlStateDisabled];
 }
 
-- (void)setNightBackgroundImageDisabled:(UIImage *)normalBackgroundImageDisabled {
-    
+- (void)setNightBackgroundImageDisabled:(UIImage *)nightBackgroundImageDisabled {
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setBackgroundImage:nightBackgroundImageDisabled forState:UIControlStateDisabled] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightBackgroundImageDisabled), nightBackgroundImageDisabled, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIImage *)normalBackgroundImageDisabled {
@@ -310,7 +366,10 @@
 }
 
 - (void)setNormalBackgroundImageDisabled:(UIImage *)normalBackgroundImageDisabled {
-    
+    if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
+        [self setBackgroundImage:normalBackgroundImageDisabled forState:UIControlStateDisabled] ;
+    }
+    objc_setAssociatedObject(self, @selector(normalBackgroundImageDisabled), normalBackgroundImageDisabled, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
