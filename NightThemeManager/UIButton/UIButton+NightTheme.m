@@ -74,7 +74,11 @@
 }
 
 - (UIColor *)nightTextColorSelected {
-    return nil ;
+    UIColor *nightTextColorSelected = objc_getAssociatedObject(self, _cmd) ;
+    if (nightTextColorSelected) {
+        return nightTextColorSelected ;
+    }
+    return [self titleColorForState:UIControlStateSelected] ;
 }
 
 - (void)setNightTextColorSelected:(UIColor *)nightTextColorSelected {
@@ -82,7 +86,11 @@
 }
 
 - (UIColor *)normalTextColorSelected {
-    return nil ;
+    UIColor *normalTextColorSelected = objc_getAssociatedObject(self, _cmd) ;
+    if (normalTextColorSelected) {
+        return normalTextColorSelected ;
+    }
+    return [self titleColorForState:UIControlStateSelected] ;
 }
 
 - (void)setNormalTextColorSelected:(UIColor *)normalTextColorSelected {
@@ -90,7 +98,11 @@
 }
 
 - (UIColor *)nightTextColorDisabled {
-    return nil ;
+    UIColor *nightTextColorDisabled = objc_getAssociatedObject(self, _cmd) ;
+    if (nightTextColorDisabled) {
+        return nightTextColorDisabled ;
+    }
+    return [self titleColorForState:UIControlStateDisabled] ;
 }
 
 - (void)setNightTextColorDisabled:(UIColor *)nightTextColorDisabled {
@@ -98,7 +110,11 @@
 }
 
 - (UIColor *)normalTextColorDisabled {
-    return nil ;
+    UIColor *normalTextColorDisabled = objc_getAssociatedObject(self, _cmd) ;
+    if (normalTextColorDisabled) {
+        return normalTextColorDisabled ;
+    }
+    return [self titleColorForState:UIControlStateDisabled] ;
 }
 
 - (void)setNormalTextColorDisabled:(UIColor *)normalTextColorDisabled {
@@ -106,7 +122,11 @@
 }
 
 - (UIImage *)nightImageNormal {
-    return nil ;
+    UIImage *nightImageNormal = objc_getAssociatedObject(self, _cmd);
+    if (nightImageNormal) {
+        return nightImageNormal;
+    }
+    return [self imageForState:UIControlStateNormal];
 }
 
 - (void)setNightImageNormal:(UIImage *)nightImageNormal {
@@ -114,15 +134,23 @@
 }
 
 - (UIImage *)normalImageNormal {
-    return nil ;
+    UIImage *normalImageNormal = objc_getAssociatedObject(self, _cmd);
+    if (normalImageNormal) {
+        return normalImageNormal;
+    }
+    return [self imageForState:UIControlStateNormal];
 }
 
 - (void)setNormalImageNormal:(UIImage *)normalImageNormal {
     
 }
 
-- (UIImage *)nightImageHighlighted {
-    return nil ;
+- (UIImage *)nightImageHihlighted {
+    UIImage *nightImageHihlighted = objc_getAssociatedObject(self, _cmd);
+    if (nightImageHihlighted) {
+        return nightImageHihlighted;
+    }
+    return [self imageForState:UIControlStateHighlighted];
 }
 
 - (void)setNightImageHighlighted:(UIImage *)nightImageHighlighted {
@@ -130,7 +158,11 @@
 }
 
 - (UIImage *)normalImageHighlighted {
-    return nil ;
+    UIImage *normalImageHighlighted = objc_getAssociatedObject(self, _cmd);
+    if (normalImageHighlighted) {
+        return normalImageHighlighted;
+    }
+    return [self imageForState:UIControlStateHighlighted];
 }
 
 - (void)setNormalImageHighlighted:(UIImage *)normalImageHighlighted {
@@ -138,7 +170,11 @@
 }
 
 - (UIImage *)nightImageSelected {
-    return nil ;
+    UIImage *nightImageSelected = objc_getAssociatedObject(self, _cmd);
+    if (nightImageSelected) {
+        return nightImageSelected;
+    }
+    return [self imageForState:UIControlStateSelected];
 }
 
 - (void)setNightImageSelected:(UIImage *)nightImageSelected {
@@ -146,7 +182,11 @@
 }
 
 - (UIImage *)normalImageSelected {
-    return nil ;
+    UIImage *normalImageSelected = objc_getAssociatedObject(self, _cmd);
+    if (normalImageSelected) {
+        return normalImageSelected;
+    }
+    return [self imageForState:UIControlStateSelected];
 }
 
 - (void)setNormalImageSelected:(UIImage *)normalImageSelected {
@@ -154,7 +194,11 @@
 }
 
 - (UIImage *)nightImageDisabled {
-    return nil ;
+    UIImage *nightImageDisabled = objc_getAssociatedObject(self, _cmd);
+    if (nightImageDisabled) {
+        return nightImageDisabled;
+    }
+    return [self imageForState:UIControlStateDisabled];
 }
 
 - (void)setNightImageDisabled:(UIImage *)nightImageDisabled {
@@ -162,7 +206,11 @@
 }
 
 - (UIImage *)normalImageDisabled {
-    return nil ;
+    UIImage *normalImageDisabled = objc_getAssociatedObject(self, _cmd);
+    if (normalImageDisabled) {
+        return normalImageDisabled;
+    }
+    return [self imageForState:UIControlStateDisabled];
 }
 
 - (void)setNormalImageDisabled:(UIImage *)normalImageDisabled {
@@ -170,7 +218,11 @@
 }
 
 - (UIImage *)nightBackgroundImageNormal {
-    return nil ;
+    UIImage *nightBackgroundImageNormal = objc_getAssociatedObject(self, _cmd);
+    if (nightBackgroundImageNormal) {
+        return nightBackgroundImageNormal;
+    }
+    return [self backgroundImageForState:UIControlStateNormal];
 }
 
 - (void)setNightBackgroundImageNormal:(UIImage *)nightBackgroundImageNormal {
@@ -178,7 +230,11 @@
 }
 
 - (UIImage *)normalBackgroundImageNormal {
-    return nil ;
+    UIImage *normalBackgroundImageNormal = objc_getAssociatedObject(self, _cmd);
+    if (normalBackgroundImageNormal) {
+        return normalBackgroundImageNormal;
+    }
+    return [self backgroundImageForState:UIControlStateNormal];
 }
 
 - (void)setNormalBackgroundImageNormal:(UIImage *)normalBackgroundImageNormal {
@@ -186,7 +242,11 @@
 }
 
 - (UIImage *)nightBackgroundImageHighlighted {
-    return nil ;
+    UIImage *nightBackgroundImageHighlighted = objc_getAssociatedObject(self, _cmd);
+    if (nightBackgroundImageHighlighted) {
+        return nightBackgroundImageHighlighted;
+    }
+    return [self backgroundImageForState:UIControlStateHighlighted];
 }
 
 - (void)setNightBackgroundImageHighlighted:(UIImage *)nightBackgroundImageHighlighted {
@@ -194,7 +254,11 @@
 }
 
 - (UIImage *)normalBackgroundImageHighlighted {
-    return nil ;
+    UIImage *normalBackgroundImageHighlighted = objc_getAssociatedObject(self, _cmd);
+    if (normalBackgroundImageHighlighted) {
+        return normalBackgroundImageHighlighted;
+    }
+    return [self backgroundImageForState:UIControlStateHighlighted];
 }
 
 - (void)setNormalBackgroundImageHighlighted:(UIImage *)normalBackgroundImageHighlighted {
@@ -202,7 +266,11 @@
 }
 
 - (UIImage *)nightBackgroundImageSelected {
-    return nil;
+    UIImage *nightBackgroundImageSelected = objc_getAssociatedObject(self, _cmd);
+    if (nightBackgroundImageSelected) {
+        return nightBackgroundImageSelected;
+    }
+    return [self backgroundImageForState:UIControlStateSelected];
 }
 
 - (void)setNightBackgroundImageSelected:(UIImage *)nightBackgroundImageSelected {
@@ -210,7 +278,11 @@
 }
 
 - (UIImage *)normalBackgroundImageSelected {
-    return nil;
+    UIImage *normalBackgroundImageSelected = objc_getAssociatedObject(self, _cmd);
+    if (normalBackgroundImageSelected) {
+        return normalBackgroundImageSelected;
+    }
+    return [self backgroundImageForState:UIControlStateSelected];
 }
 
 - (void)setNormalBackgroundImageSelected:(UIImage *)normalBackgroundImageSelected {
@@ -218,7 +290,11 @@
 }
 
 - (UIImage *)nightBackgroundImageDisabled {
-    return nil ;
+    UIImage *nightBackgroundImageDisabled = objc_getAssociatedObject(self, _cmd);
+    if (nightBackgroundImageDisabled) {
+        return nightBackgroundImageDisabled;
+    }
+    return [self backgroundImageForState:UIControlStateDisabled];
 }
 
 - (void)setNightBackgroundImageDisabled:(UIImage *)normalBackgroundImageDisabled {
@@ -226,7 +302,11 @@
 }
 
 - (UIImage *)normalBackgroundImageDisabled {
-    return nil ;
+    UIImage *normalBackgroundImageDisabled = objc_getAssociatedObject(self, _cmd);
+    if (normalBackgroundImageDisabled) {
+        return normalBackgroundImageDisabled;
+    }
+    return [self backgroundImageForState:UIControlStateDisabled];
 }
 
 - (void)setNormalBackgroundImageDisabled:(UIImage *)normalBackgroundImageDisabled {
