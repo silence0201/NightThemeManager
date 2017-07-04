@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Silence. All rights reserved.
 //
 
-#import "SINightThemeManager.h"
+#import <UIKit/UIKit.h>
 
 @interface UIView (NightTheme)
 

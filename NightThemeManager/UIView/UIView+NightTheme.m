@@ -7,6 +7,7 @@
 //
 
 #import "UIView+NightTheme.h"
+#import "SINightThemeManager.h"
 #import <objc/runtime.h>
 
 @implementation UIView (NightTheme)
@@ -42,8 +43,11 @@
 }
 
 - (void)themeChange {
-    UIColor *color = [SINightThemeManager currentTheme] == SINightThemeNight ? self.nightBackgroundColor : self.normalBackgroundColor ;
-    [self setBackgroundColor:color] ;
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setBackgroundColor:self.nightBackgroundColor] ;
+    }else {
+        [self setBackgroundColor:self.normalBackgroundColor] ;
+    }
 }
 
 - (void)themeChangeWithDuration:(NSTimeInterval)duration {
