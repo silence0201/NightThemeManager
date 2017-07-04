@@ -16,6 +16,7 @@
 		E86873931F0A8BAE00CB1676 /* UIView+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873921F0A8BAE00CB1676 /* UIView+NightTheme.m */; };
 		E868739A1F0A9E8400CB1676 /* SINightThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873991F0A9E8400CB1676 /* SINightThemeManager.m */; };
 		E868739F1F0BD96E00CB1676 /* UILabel+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E868739E1F0BD96E00CB1676 /* UILabel+NightTheme.m */; };
+		E86873A31F0BDFDE00CB1676 /* UIButton+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873A21F0BDFDE00CB1676 /* UIButton+NightTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		E868739B1F0A9E9D00CB1676 /* NightTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NightTheme.h; sourceTree = "<group>"; };
 		E868739D1F0BD96E00CB1676 /* UILabel+NightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NightTheme.h"; sourceTree = "<group>"; };
 		E868739E1F0BD96E00CB1676 /* UILabel+NightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NightTheme.m"; sourceTree = "<group>"; };
+		E86873A11F0BDFDE00CB1676 /* UIButton+NightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NightTheme.h"; sourceTree = "<group>"; };
+		E86873A21F0BDFDE00CB1676 /* UIButton+NightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NightTheme.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,7 @@
 			children = (
 				E868739B1F0A9E9D00CB1676 /* NightTheme.h */,
 				E86873971F0A9E8400CB1676 /* Manager */,
+				E86873A01F0BDFC600CB1676 /* UIButton */,
 				E868739C1F0BD95100CB1676 /* UILabel */,
 				E86873901F0A8B8200CB1676 /* UIView */,
 			);
@@ -127,6 +131,15 @@
 				E868739E1F0BD96E00CB1676 /* UILabel+NightTheme.m */,
 			);
 			path = UILabel;
+			sourceTree = "<group>";
+		};
+		E86873A01F0BDFC600CB1676 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				E86873A11F0BDFDE00CB1676 /* UIButton+NightTheme.h */,
+				E86873A21F0BDFDE00CB1676 /* UIButton+NightTheme.m */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E86873801F0A8AEA00CB1676 /* ViewController.m in Sources */,
+				E86873A31F0BDFDE00CB1676 /* UIButton+NightTheme.m in Sources */,
 				E868739A1F0A9E8400CB1676 /* SINightThemeManager.m in Sources */,
 				E868737D1F0A8AEA00CB1676 /* AppDelegate.m in Sources */,
 				E868739F1F0BD96E00CB1676 /* UILabel+NightTheme.m in Sources */,
