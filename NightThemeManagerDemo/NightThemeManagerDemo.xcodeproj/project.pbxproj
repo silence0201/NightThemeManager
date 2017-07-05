@@ -22,6 +22,7 @@
 		E86873AF1F0D2E9D00CB1676 /* UIColor+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873AE1F0D2E9D00CB1676 /* UIColor+NightTheme.m */; };
 		E86873B31F0D354100CB1676 /* UITabBar+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873B21F0D354100CB1676 /* UITabBar+NightTheme.m */; };
 		E86873B71F0D363B00CB1676 /* UITableView+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873B61F0D363B00CB1676 /* UITableView+NightTheme.m */; };
+		E86873BA1F0D38B900CB1676 /* UIViewController+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873B91F0D38B900CB1676 /* UIViewController+NightTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		E86873B21F0D354100CB1676 /* UITabBar+NightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+NightTheme.m"; sourceTree = "<group>"; };
 		E86873B51F0D363B00CB1676 /* UITableView+NightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+NightTheme.h"; sourceTree = "<group>"; };
 		E86873B61F0D363B00CB1676 /* UITableView+NightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+NightTheme.m"; sourceTree = "<group>"; };
+		E86873B81F0D38B900CB1676 /* UIViewController+NightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NightTheme.h"; sourceTree = "<group>"; };
+		E86873B91F0D38B900CB1676 /* UIViewController+NightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NightTheme.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 			children = (
 				E86873AD1F0D2E9D00CB1676 /* UIColor+NightTheme.h */,
 				E86873AE1F0D2E9D00CB1676 /* UIColor+NightTheme.m */,
+				E86873B81F0D38B900CB1676 /* UIViewController+NightTheme.h */,
+				E86873B91F0D38B900CB1676 /* UIViewController+NightTheme.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				E86873801F0A8AEA00CB1676 /* ViewController.m in Sources */,
 				E86873A31F0BDFDE00CB1676 /* UIButton+NightTheme.m in Sources */,
 				E868739A1F0A9E8400CB1676 /* SINightThemeManager.m in Sources */,
+				E86873BA1F0D38B900CB1676 /* UIViewController+NightTheme.m in Sources */,
 				E86873AF1F0D2E9D00CB1676 /* UIColor+NightTheme.m in Sources */,
 				E868737D1F0A8AEA00CB1676 /* AppDelegate.m in Sources */,
 				E86873B31F0D354100CB1676 /* UITabBar+NightTheme.m in Sources */,

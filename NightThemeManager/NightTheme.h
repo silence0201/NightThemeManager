@@ -15,5 +15,6 @@
 #import "UIView+NightTheme.h"
 #import "UINavigationBar+NightTheme.h"
 #import "UITabBar+NightTheme.h"
+#import "UITableView+NightTheme.h"
 
 #endif /* NightTheme_h */
