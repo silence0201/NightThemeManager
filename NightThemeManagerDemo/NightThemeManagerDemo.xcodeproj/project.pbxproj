@@ -21,6 +21,7 @@
 		E86873AB1F0D2C9600CB1676 /* UINavigationBar+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873AA1F0D2C9600CB1676 /* UINavigationBar+NightTheme.m */; };
 		E86873AF1F0D2E9D00CB1676 /* UIColor+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873AE1F0D2E9D00CB1676 /* UIColor+NightTheme.m */; };
 		E86873B31F0D354100CB1676 /* UITabBar+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873B21F0D354100CB1676 /* UITabBar+NightTheme.m */; };
+		E86873B71F0D363B00CB1676 /* UITableView+NightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E86873B61F0D363B00CB1676 /* UITableView+NightTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		E86873AE1F0D2E9D00CB1676 /* UIColor+NightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NightTheme.m"; sourceTree = "<group>"; };
 		E86873B11F0D354100CB1676 /* UITabBar+NightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+NightTheme.h"; sourceTree = "<group>"; };
 		E86873B21F0D354100CB1676 /* UITabBar+NightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+NightTheme.m"; sourceTree = "<group>"; };
+		E86873B51F0D363B00CB1676 /* UITableView+NightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+NightTheme.h"; sourceTree = "<group>"; };
+		E86873B61F0D363B00CB1676 /* UITableView+NightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+NightTheme.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 				E868739B1F0A9E9D00CB1676 /* NightTheme.h */,
 				E86873971F0A9E8400CB1676 /* Manager */,
 				E86873AC1F0D2E8800CB1676 /* Helper */,
+				E86873B41F0D361A00CB1676 /* UITabelView */,
 				E86873B01F0D351300CB1676 /* UITabBar */,
 				E86873A81F0D2C0B00CB1676 /* UINavigationBar */,
 				E86873A41F0D273E00CB1676 /* UIImageView */,
@@ -194,6 +198,15 @@
 			path = UITabBar;
 			sourceTree = "<group>";
 		};
+		E86873B41F0D361A00CB1676 /* UITabelView */ = {
+			isa = PBXGroup;
+			children = (
+				E86873B51F0D363B00CB1676 /* UITableView+NightTheme.h */,
+				E86873B61F0D363B00CB1676 /* UITableView+NightTheme.m */,
+			);
+			path = UITabelView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,6 +286,7 @@
 				E868737D1F0A8AEA00CB1676 /* AppDelegate.m in Sources */,
 				E86873B31F0D354100CB1676 /* UITabBar+NightTheme.m in Sources */,
 				E868739F1F0BD96E00CB1676 /* UILabel+NightTheme.m in Sources */,
+				E86873B71F0D363B00CB1676 /* UITableView+NightTheme.m in Sources */,
 				E868737A1F0A8AEA00CB1676 /* main.m in Sources */,
 				E86873931F0A8BAE00CB1676 /* UIView+NightTheme.m in Sources */,
 				E86873A71F0D276900CB1676 /* UIImageView+NightTheme.m in Sources */,
