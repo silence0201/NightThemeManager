@@ -76,6 +76,7 @@ static CGFloat const stepDuration = 0.01;
     objc_setAssociatedObject(self, @selector(normalBarTintColor), normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+
 - (void)themeChange {
     if ([SINightThemeManager currentTheme] == SINightThemeNight) {
         [self setBackgroundColor:self.nightBackgroundColor] ;
