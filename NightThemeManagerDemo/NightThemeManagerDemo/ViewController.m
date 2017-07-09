@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NightTheme.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+- (IBAction)changeAction:(id)sender {
+    [SINightThemeManager changeTheme] ;
 }
 
 

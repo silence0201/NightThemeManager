@@ -10,7 +10,6 @@
 #import "SINightThemeManager.h"
 #import <objc/runtime.h>
 
-static CGFloat const SINightAnimationDuration = 0.3f;
 @implementation UIViewController (NightTheme)
 
 + (void)load{
@@ -34,7 +33,7 @@ static CGFloat const SINightAnimationDuration = 0.3f;
 
 - (void)night_viewWillAppear:(BOOL)animated{
     [self night_viewWillAppear:animated];
-    [SINightThemeManager changeTheme:self.view withDuartion:SINightAnimationDuration] ;
+    [SINightThemeManager changeTheme:self.view] ;
 }
 
 @end
