@@ -6,11 +6,11 @@
 黑夜模式的简单实现,利用`Objective-C`分类进行对应属性绑定
 
 ### 导入
-将项目中`MarkdownView`文件夹拖到项目里 
+将项目中`NightThemeManager `文件夹拖到项目里 
 
 或者使用`Pod`安装
 
-	pod 'SIMarkdown', '~> 0.1.0'	
+	pod 'SINightThemeManager', '~> 0.1.0'	
 	
 ### 使用
 1. 导入头文件
