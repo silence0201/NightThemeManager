@@ -76,17 +76,49 @@ static CGFloat const stepDuration = 0.01;
     objc_setAssociatedObject(self, @selector(normalBarTintColor), normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+- (UIColor *)nightTitleColor {
+    UIColor *nightTitleColor = objc_getAssociatedObject(self, _cmd);
+    if (nightTitleColor) {
+        return nightTitleColor;
+    }
+    return [[self titleTextAttributes] objectForKey:NSForegroundColorAttributeName] ;
+}
+
+- (void)setNightTitleColor:(UIColor *)nightTitleColor {
+    if ([SINightThemeManager currentTheme] == SINightThemeNight) {
+        [self setTitleTextAttributes:@{NSForegroundColorAttributeName:nightTitleColor}] ;
+    }
+    objc_setAssociatedObject(self, @selector(nightTitleColor), nightTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIColor *)normalTitleColor {
+    UIColor *normalTitleColor = objc_getAssociatedObject(self, _cmd);
+    if (normalTitleColor) {
+        return normalTitleColor;
+    }
+    return [[self titleTextAttributes] objectForKey:NSForegroundColorAttributeName] ;
+}
+
+- (void)setNormalTitleColor:(UIColor *)normalTitleColor {
+    if ([SINightThemeManager currentTheme] == SINightThemeNormal) {
+        [self setTitleTextAttributes:@{NSForegroundColorAttributeName:normalTitleColor}] ;
+    }
+    objc_setAssociatedObject(self, @selector(normalTitleColor), normalTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 - (void)themeChange {
     if ([SINightThemeManager currentTheme] == SINightThemeNight) {
         [self setBackgroundColor:self.nightBackgroundColor] ;
         
         [self setTintColor:self.nightTintColor];
         [self setBarTintColor:self.nightBarTintColor];
+        [self setTitleTextAttributes:@{NSForegroundColorAttributeName:self.nightTitleColor}];
     }else {
         [self setBackgroundColor:self.normalBackgroundColor] ;
         
         [self setTintColor:self.normalTintColor];
         [self setBarTintColor:self.normalBarTintColor];
+        [self setTitleTextAttributes:@{NSForegroundColorAttributeName:self.normalTitleColor}];
     }
 }
 

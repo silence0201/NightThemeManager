@@ -394,7 +394,7 @@
     } else {
         [self setBackgroundColor:self.normalBackgroundColor];
         
-        [self setTitleColor:self.nightTextColorNormal forState:UIControlStateNormal];
+        [self setTitleColor:self.normalTextColorNormal forState:UIControlStateNormal];
         [self setTitleColor:self.normalTextColorSelected forState:UIControlStateSelected];
         [self setTitleColor:self.normalTextColorHighlighted forState:UIControlStateHighlighted];
         [self setTitleColor:self.normalTextColorDisabled forState:UIControlStateDisabled];

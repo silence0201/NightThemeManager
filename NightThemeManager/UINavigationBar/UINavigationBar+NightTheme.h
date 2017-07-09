@@ -16,6 +16,9 @@
 @property (nonatomic,strong) IBInspectable UIColor *nightBarTintColor ;
 @property (nonatomic,strong) IBInspectable UIColor *normalBarTintColor ;
 
+@property (nonatomic,strong) IBInspectable UIColor *nightTitleColor ;
+@property (nonatomic,strong) IBInspectable UIColor *normalTitleColor ;
+
 - (void)themeChange ;
 - (void)themeChangeWithDuration:(NSTimeInterval)duration ;
 

@@ -50,7 +50,7 @@ NSString *const SINightThemeNewThemeKey = @"SINightThemeNewThemeKey" ;
     NSDictionary *info = @{SINightThemeOldThemeKey : @(_theme),
                            SINightThemeNewThemeKey : @(theme)} ;
     _theme = theme ;
-    [SINightThemeManager changeTheme:[UIApplication sharedApplication].keyWindow.subviews.lastObject];
+    [SINightThemeManager changeTheme:[UIApplication sharedApplication].keyWindow.subviews.lastObject ];
     [[NSNotificationCenter defaultCenter] postNotificationName:SINightThemeChangeNotification object:nil userInfo:info] ;
     if(theme == SINightThemeNight) {
         [[NSNotificationCenter defaultCenter] postNotificationName:SINightFallingNotification object:nil userInfo:info] ;
