@@ -1,0 +1,6 @@
+framework module SINightThemeManager {
+  umbrella header "SINightThemeManager.h"
+
+  export *
+  module * { export * }
+}
